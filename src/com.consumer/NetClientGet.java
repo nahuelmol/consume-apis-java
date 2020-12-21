@@ -1,4 +1,4 @@
-package restclient;
+package com.consumer;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -6,7 +6,7 @@ import java.net.URL;
 
 public class NetClientGet {
     public static void main(String[] args) {
-        try {
+        try{
           int codeResp = 0;
           
           URL url = new URL("http://localhost:3002/RestWebserviceDemo/rest/json/product/dynamicData?size=5");//your url i.e fetch data from .
@@ -31,7 +31,7 @@ public class NetClientGet {
           }
           conn.disconnect();
 
-        }catch (Exception e) {
+        }catch(Exception e) {
           System.out.println("Exception in NetClientGet:- " + e);
         }
     }
